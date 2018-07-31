@@ -10,16 +10,17 @@ using System.Windows.Forms;
 
 namespace WebViewLockup
 {
-    public sealed partial class Form1 : Form
+    public sealed partial class MainForm : Form
     {
-        public Form1()
+        public MainForm()
         {
             InitializeComponent();
         }
 
-        private void Form1_Shown(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            this.webView1.NavigateToString("<html><head></head><body><p>Hello world</p></body></html>");
+            var f = new Form1();
+            f.Show();
         }
     }
 }
