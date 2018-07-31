@@ -35,11 +35,10 @@
             // 
             this.button1.Location = new System.Drawing.Point(13, 13);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(162, 23);
+            this.button1.Size = new System.Drawing.Size(171, 96);
             this.button1.TabIndex = 0;
-            this.button1.Text = "Show interesting form";
+            this.button1.Text = "Dummy button";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // MainForm
             // 
@@ -49,6 +48,7 @@
             this.Controls.Add(this.button1);
             this.Name = "MainForm";
             this.Text = "MainForm";
+            this.Shown += new System.EventHandler(this.MainForm_Shown);
             this.ResumeLayout(false);
 
         }

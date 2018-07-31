@@ -17,10 +17,13 @@ namespace WebViewLockup
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+
+        private void MainForm_Shown(object sender, EventArgs e)
         {
             var f = new Form1();
             f.Show();
         }
+
+
     }
 }

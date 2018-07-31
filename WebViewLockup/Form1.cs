@@ -19,7 +19,17 @@ namespace WebViewLockup
 
         private void Form1_Shown(object sender, EventArgs e)
         {
-            this.webView1.NavigateToString("<html><head></head><body><p>Hello world</p></body></html>");
+            this.webView1.NavigateToString("<html><head></head><body><p>Closing this form causes UI lockup</p></body></html>");
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            const bool bugWorkaround = false;
+
+            if (bugWorkaround)
+            {
+                this.webView1.Close(); // this prevents the UI locking up
+            }
         }
     }
 }
